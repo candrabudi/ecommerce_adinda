@@ -82,11 +82,24 @@
 
     <!-- Pembayaran -->
     <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon icon-base ti tabler-credit-card"></i>
             <div data-i18n="Payment">Pembayaran</div>
         </a>
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    <div data-i18n="Payment Method">Metode Pembayaran</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    <div data-i18n="Payment Account">Akun Pembayaran</div>
+                </a>
+            </li>
+        </ul>
     </li>
+
 
     <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
         <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>

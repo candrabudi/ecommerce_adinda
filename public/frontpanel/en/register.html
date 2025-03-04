@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from demo.innoshop.cn/en/register by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Mar 2025 13:30:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base >
+  <title>InnoShop - Innovative Open Source E-commerce System - Built on Laravel 11, with multi-language and multi-currency support, a powerful e-commerce system based on a Hook-based plugin architecture.</title>
+  <meta name="description" content="InnoShop is an innovative open-source e-commerce platform developed based on Laravel 11, featuring multi-language and multi-currency support. It adopts a powerful and flexible plugin architecture based on Hooks, providing users with a wealth of customization and extension capabilities. Welcome to experience InnoShop and create your own e-commerce platform!">
+  <meta name="keywords" content="InnoShop, Innovation, Open Source, E-commerce, Laravel 11, Multi-language, Multi-currency, Hook, Plugin architecture, Flexible, Powerful">
+  <meta name="generator" content="InnoShop Community v0.3.10(20250226)">
+  <meta name="csrf-token" content="vjydqRbagcNrSm2sWUhtz8jWRGxY9JNESwHRISm4">
+  <meta name="api-token" content="">
+  <link rel="shortcut icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="../themes/default/css/bootstrape55e.css?id=2cbbc8dc06e883c2d672b3cafc1f0765">
+  <script src="../themes/default/js/app1b42.js?id=faed44020e7d8fb6c8a704322dc94dac"></script>
+  <script src="../vendor/layer/3.5.1/layer.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../themes/default/css/app1a80.css?id=eff7cca30fdfd01f840ba4a7d4f887c3">
+  <script>
+    let urls = {
+      api_base: 'https://demo.innoshop.cn/api',
+      base_url: 'https://demo.innoshop.cn/en',
+      upload_images: 'https://demo.innoshop.cn/upload/images',
+      cart_add: 'https://demo.innoshop.cn/en/carts',
+      cart_mini: 'https://demo.innoshop.cn/en/cart/mini',
+      login: 'https://demo.innoshop.cn/en/login',
+      favorites: 'https://demo.innoshop.cn/en/account/favorites',
+      favorite_cancel: 'https://demo.innoshop.cn/en/account/favorites/cancel',
+    }
+
+    let config = {
+      isLogin: !!null,
+    }
+  </script>
+     </head>
+
+<body class="page-login">
+      <header id="appHeader">
+  <div class="header-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="language-switch d-flex align-items-center">
+                  <div class="dropdown">
+            <a class="btn dropdown-toggle" href="javascript:void(0)">
+              <img src="../images/flag/en.png" class="img-fluid"> English
+            </a>
+
+            <div class="dropdown-menu">
+                              <a class="dropdown-item d-flex" href="register.html">
+                  <div class="wh-20 me-2"><img src="../images/flag/en.png" class="img-fluid border"></div>
+                  English
+                </a>
+                              <a class="dropdown-item d-flex" href="register.html">
+                  <div class="wh-20 me-2"><img src="../images/flag/zh_cn.png" class="img-fluid border"></div>
+                  简体中文
+                </a>
+                          </div>
+          </div>
+        
+                  <div class="dropdown ms-4">
+            <a class="btn dropdown-toggle" href="javascript:void(0)">
+              人民币
+            </a>
+
+            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="register.html">
+                  USD ($)
+                </a>
+                              <a class="dropdown-item" href="register.html">
+                  人民币 (￥)
+                </a>
+                          </div>
+          </div>
+                       </div>
+      <div class="top-info">
+                 <a href="articles.html">News</a>
+                 <span><i class="bi bi-telephone-outbound"></i> 13688886666</span>
+               </div>
+    </div>
+  </div>
+  <div class="header-desktop">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="left">
+        <h1 class="logo">
+          <a href="../en.html">
+            <img src="../images/logo.png" class="img-fluid">
+          </a>
+        </h1>
+        <div class="menu">
+          <nav class="navbar navbar-expand-md navbar-light">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../en.html">Home</a>
+              </li>
+
+                                                                     <li class="nav-item">
+                      <div class="dropdown">
+                                                  <a class="nav-link " href="category-women-clothing.html">Women</a>
+                                                <ul class="dropdown-menu">
+                                                                                    <li><a class="dropdown-item" href="category-casual-wear.html">Casual Wear</a></li>
+                                                                                                                <li><a class="dropdown-item" href="category-formal-wear.html">Formal Wear</a></li>
+                                                                              </ul>
+                      </div>
+                    </li>
+                                                                        <li class="nav-item">
+                      <div class="dropdown">
+                                                  <a class="nav-link " href="category-men-clothing.html">Men</a>
+                                                <ul class="dropdown-menu">
+                                                                                    <li><a class="dropdown-item" href="category-casual-wear-men.html">Casual Wear</a></li>
+                                                                                                                <li><a class="dropdown-item" href="category-business-wear.html">Business Wear</a></li>
+                                                                              </ul>
+                      </div>
+                    </li>
+                                                                        <li class="nav-item">
+                      <div class="dropdown">
+                                                  <a class="nav-link " href="category-children-clothing.html">Children</a>
+                                                <ul class="dropdown-menu">
+                                                                                    <li><a class="dropdown-item" href="category-boys-clothing.html">Boys</a></li>
+                                                                                                                <li><a class="dropdown-item" href="category-girls-clothing.html">Girls</a></li>
+                                                                              </ul>
+                      </div>
+                    </li>
+                                                                        <li class="nav-item">
+                      <div class="dropdown">
+                                                  <a class="nav-link " href="category-sportswear.html">Sports</a>
+                                                <ul class="dropdown-menu">
+                                                                                    <li><a class="dropdown-item" href="category-sports-clothing.html">Sports Clothing</a></li>
+                                                                                                                <li><a class="dropdown-item" href="category-sports-accessories.html">Sports Accessories</a></li>
+                                                                              </ul>
+                      </div>
+                    </li>
+                                                                        <li class="nav-item">
+                      <div class="dropdown">
+                                                  <a class="nav-link " href="category-accessories.html">Accessories</a>
+                                                <ul class="dropdown-menu">
+                                                                                    <li><a class="dropdown-item" href="category-hats.html">Hats</a></li>
+                                                                                                                <li><a class="dropdown-item" href="category-scarves.html">Scarves</a></li>
+                                                                              </ul>
+                      </div>
+                    </li>
+                                                                                              <li class="nav-item">
+                        <a class="nav-link " href="about.html">About</a>
+                      </li>
+                                                                                 </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="right">
+        <form action="https://demo.innoshop.cn/en/products" method="get" class="search-group">
+          <input type="text" class="form-control" name="keyword" placeholder="Search" value="">
+          <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+        </form>
+        <div class="icons">
+          <div class="item">
+            <div class="dropdown account-icon">
+              <a class="btn dropdown-toggle px-0" href="login.html">
+                <img src="../icon/account.svg" class="img-fluid">
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-end">
+                                <a href="login.html" class="dropdown-item">Login</a>
+                <a href="register.html" class="dropdown-item">Register</a>
+                              </div>
+            </div>
+          </div>
+          <div class="item">
+            <a href="login.html"><img src="../icon/love.svg" class="img-fluid"><span class="icon-quantity">0</span></a>
+          </div>
+          <div class="item">
+            <a href="cart.html" class="header-cart-icon"><img src="../icon/cart.svg" class="img-fluid"><span class="icon-quantity">0</span></a>
+          </div>
+                   </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-mobile">
+    <div class="mb-icon" data-bs-toggle="offcanvas" data-bs-target="#mobile-menu-offcanvas" aria-controls="offcanvasExample">
+      <i class="bi bi-list"></i>
+    </div>
+
+    <div class="logo">
+      <a href="../en.html">
+        <img src="../images/logo.png" class="img-fluid">
+      </a>
+    </div>
+
+    <a href="cart.html" class="header-cart-icon"><img src="../icon/cart.svg" class="img-fluid"><span class="icon-quantity">12</span></a>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-menu-offcanvas">
+      <div class="offcanvas-header">
+        <form action="#" method="get" class="search-group">
+          <input type="text" class="form-control" placeholder="Search">
+          <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+        </form>
+        <a class="account-icon" href="login.html">
+          <img src="../icon/account.svg" class="img-fluid">
+        </a>
+      </div>
+      <div class="close-offcanvas" data-bs-dismiss="offcanvas"><i class="bi bi-chevron-compact-left"></i></div>
+      <div class="offcanvas-body mobile-menu-wrap">
+        <div class="accordion accordion-flush" id="menu-accordion">
+          <div class="accordion-item">
+            <div class="nav-item-text">
+              <a class="nav-link " aria-current="page" href="../en.html">Home</a>
+            </div>
+          </div>
+
+                                                     <div class="accordion-item">
+                  <div class="nav-item-text">
+                    <a class="nav-link" href="category-women-clothing.html" data-bs-toggle="">
+                      Women
+                    </a>
+                                        <span class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-menu-0"><i class="bi bi-chevron-down"></i></span>
+                                      </div>
+
+                                    <div class="accordion-collapse collapse" id="flush-menu-0" data-bs-parent="#menu-accordion">
+                    <div class="children-group">
+                      <ul class="nav flex-column ul-children">
+                                                                              <li class="nav-item">
+                              <a class="nav-link" href="category-casual-wear.html">Casual Wear</a>
+                            </li>
+                                                                                                        <li class="nav-item">
+                              <a class="nav-link" href="category-formal-wear.html">Formal Wear</a>
+                            </li>
+                                                                        </ul>
+                    </div>
+                  </div>
+                                  </div>
+                                                        <div class="accordion-item">
+                  <div class="nav-item-text">
+                    <a class="nav-link" href="category-men-clothing.html" data-bs-toggle="">
+                      Men
+                    </a>
+                                        <span class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-menu-1"><i class="bi bi-chevron-down"></i></span>
+                                      </div>
+
+                                    <div class="accordion-collapse collapse" id="flush-menu-1" data-bs-parent="#menu-accordion">
+                    <div class="children-group">
+                      <ul class="nav flex-column ul-children">
+                                                                              <li class="nav-item">
+                              <a class="nav-link" href="category-casual-wear-men.html">Casual Wear</a>
+                            </li>
+                                                                                                        <li class="nav-item">
+                              <a class="nav-link" href="category-business-wear.html">Business Wear</a>
+                            </li>
+                                                                        </ul>
+                    </div>
+                  </div>
+                                  </div>
+                                                        <div class="accordion-item">
+                  <div class="nav-item-text">
+                    <a class="nav-link" href="category-children-clothing.html" data-bs-toggle="">
+                      Children
+                    </a>
+                                        <span class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-menu-2"><i class="bi bi-chevron-down"></i></span>
+                                      </div>
+
+                                    <div class="accordion-collapse collapse" id="flush-menu-2" data-bs-parent="#menu-accordion">
+                    <div class="children-group">
+                      <ul class="nav flex-column ul-children">
+                                                                              <li class="nav-item">
+                              <a class="nav-link" href="category-boys-clothing.html">Boys</a>
+                            </li>
+                                                                                                        <li class="nav-item">
+                              <a class="nav-link" href="category-girls-clothing.html">Girls</a>
+                            </li>
+                                                                        </ul>
+                    </div>
+                  </div>
+                                  </div>
+                                                        <div class="accordion-item">
+                  <div class="nav-item-text">
+                    <a class="nav-link" href="category-sportswear.html" data-bs-toggle="">
+                      Sports
+                    </a>
+                                        <span class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-menu-3"><i class="bi bi-chevron-down"></i></span>
+                                      </div>
+
+                                    <div class="accordion-collapse collapse" id="flush-menu-3" data-bs-parent="#menu-accordion">
+                    <div class="children-group">
+                      <ul class="nav flex-column ul-children">
+                                                                              <li class="nav-item">
+                              <a class="nav-link" href="category-sports-clothing.html">Sports Clothing</a>
+                            </li>
+                                                                                                        <li class="nav-item">
+                              <a class="nav-link" href="category-sports-accessories.html">Sports Accessories</a>
+                            </li>
+                                                                        </ul>
+                    </div>
+                  </div>
+                                  </div>
+                                                        <div class="accordion-item">
+                  <div class="nav-item-text">
+                    <a class="nav-link" href="category-accessories.html" data-bs-toggle="">
+                      Accessories
+                    </a>
+                                        <span class="collapsed" data-bs-toggle="collapse" data-bs-target="#flush-menu-4"><i class="bi bi-chevron-down"></i></span>
+                                      </div>
+
+                                    <div class="accordion-collapse collapse" id="flush-menu-4" data-bs-parent="#menu-accordion">
+                    <div class="children-group">
+                      <ul class="nav flex-column ul-children">
+                                                                              <li class="nav-item">
+                              <a class="nav-link" href="category-hats.html">Hats</a>
+                            </li>
+                                                                                                        <li class="nav-item">
+                              <a class="nav-link" href="category-scarves.html">Scarves</a>
+                            </li>
+                                                                        </ul>
+                    </div>
+                  </div>
+                                  </div>
+                                                        <div class="accordion-item">
+                  <div class="nav-item-text">
+                    <a class="nav-link" href="about.html" data-bs-toggle="">
+                      About
+                    </a>
+                                      </div>
+
+                                  </div>
+                                     
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+   
+  <div class="m-0 p-0" id="appContent">
+        <div class="breadcrumb-wrap">
+  <div class="container d-flex justify-content-between">
+    <ul class="breadcrumb">
+                        <li>
+                          <i class="bi bi-house-door-fill home-icon"></i>
+                        <a href="../en.html">Home</a>
+          </li>
+                                <li>
+                        <a href="register.html">Sign In</a>
+          </li>
+                  </ul>
+
+      </div>
+</div>
+
+ 
+<div class="container">
+  <div class="login-register-box ">
+    <div class="login-title">Register</div>
+    <div class="login-sub-title">Please fill in the registration information in the form below</div>
+    <form action="https://demo.innoshop.cn/en/register" class="needs-validation form-wrap" novalidate>
+      <input type="hidden" name="_token" value="vjydqRbagcNrSm2sWUhtz8jWRGxY9JNESwHRISm4" autocomplete="off">             <div class="form-group mb-4">
+        <input id="email" type="email" class="form-control" name="email" value="" required autocomplete="email" placeholder="Email" />
+        <span class="invalid-feedback" role="alert"><strong>Please enter your email</strong></span>
+      </div>
+                    <div class="form-group mb-4">
+        <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password" placeholder="Password" />
+        <input class="d-none" name="password_confirmation" />
+        <span class="invalid-feedback" role="alert"><strong>Please enter your password</strong></span>
+      </div>
+
+      <div class="btn-submit">
+        <button type="button" class="btn btn-primary form-submit btn-lg">Register now</button>
+        <a href="login.html">Already have an account? log in <i class="bi bi-arrow-up-right-square"></i></a>
+      </div>
+
+      
+    </form>
+  </div>
+</div>
+
+ 
+  </div>
+
+      <footer id="appFooter">
+  <div class="footer-box">
+    <div class="container">
+      <div class="footer-top-links">
+        <div class="row">
+          <div class="col-12 col-md-4 footer-item">
+            <div class="about">
+              <div class="footer-link-title">
+                <span>About</span>
+                <div class="footer-link-icon"><i class="bi bi-plus-lg"></i></div>
+              </div>
+              <div class="about-text footer-item-content">
+                <p>
+                  <b>InnoShop is an innovative open-source e-commerce platform developed based on Laravel 11, featuring multi-language and multi-currency support. It adopts a powerful and flexible plugin architecture based on Hooks, providing users with a wealth of customization and extension capabilities. Welcome to experience InnoShop and create your own e-commerce platform!</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="row">
+              <div class="col-12 col-md-3 footer-item">
+                <div class="footer-links">
+                  <div class="footer-link-title">
+                    <span>Products</span>
+                    <div class="footer-link-icon"><i class="bi bi-plus-lg"></i></div>
+                  </div>
+                  <ul class="footer-item-content">
+                                          <li><a href="category-women-clothing.html">Women</a></li>
+                                          <li><a href="category-men-clothing.html">Men</a></li>
+                                          <li><a href="category-children-clothing.html">Children</a></li>
+                                      </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 footer-item">
+                <div class="footer-links">
+                  <div class="footer-link-title">
+                    <span>Articles</span>
+                    <div class="footer-link-icon"><i class="bi bi-plus-lg"></i></div>
+                  </div>
+                  <ul class="footer-item-content">
+                                          <li><a href="catalog-product.html">Product Updates</a></li>
+                                          <li><a href="catalog-industry.html">Industry News</a></li>
+                                      </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 footer-item">
+                <div class="footer-links">
+                  <div class="footer-link-title">
+                    <span>Pages</span>
+                    <div class="footer-link-icon"><i class="bi bi-plus-lg"></i></div>
+                  </div>
+                  <ul class="footer-item-content">
+                                          <li><a href="creations.html">Creations</a></li>
+                                          <li><a href="services.html">Services</a></li>
+                                          <li><a href="about.html">About</a></li>
+                                      </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 footer-item">
+                <div class="footer-links">
+                  <div class="footer-link-title">
+                    <span>Specials</span>
+                    <div class="footer-link-icon"><i class="bi bi-plus-lg"></i></div>
+                  </div>
+                  <ul class="footer-item-content">
+                                      </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-box">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="left-links">
+              Powered By <a href="https://www.innoshop.com/" target="_blank">InnoShop</a>
+              <!-- Powered By InnoShop Community v0.3.10(20250226) -->
+              <span class="copyright-text">
+                <a href="../en.html" class="ms-2" target="_blank">FunnLink</a>
+                &copy; 2025 All Rights Reserved
+                              </span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="payment-icon">
+              <img src="../images/demo/payment/1.png" class="img-fluid">
+              <img src="../images/demo/payment/2.png" class="img-fluid">
+              <img src="../images/demo/payment/3.png" class="img-fluid">
+              <img src="../images/demo/payment/4.png" class="img-fluid">
+              <img src="../images/demo/payment/5.png" class="img-fluid">
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+ 
+  
+    <script>
+    function openSocialLogin(url) {
+      const width = 600;
+      const height = 600;
+      const left = (window.innerWidth / 2) - (width / 2);
+      const top = (window.innerHeight / 2) - (height / 2);
+      window.open(url, 'socialLogin', `width=${width},height=${height},top=${top},left=${left}`);
+    }
+  </script>
+<script>
+  const iframe = false;
+
+  inno.validateAndSubmitForm('.form-wrap', function(data) {
+    layer.load(2, {shade: [0.3,'#fff'] })
+    const params = new URLSearchParams(data);
+    params.set('password_confirmation', $('input[name="password"]').val());
+
+    axios.post($('.form-wrap').attr('action'), params.toString()).then(function(res) {
+      if (res.success) {
+        if (iframe) {
+          setTimeout(() => {
+            parent.layer.closeAll()
+            parent.window.location.reload()
+          }, 400);
+        } else {
+          layer.msg(res.message, {icon: 1})
+          location.href = 'login.html';
+        }
+      } else {
+        layer.msg(res.message, { icon: 2 });
+      }
+    }).finally(function() {layer.closeAll('loading')});
+  });
+</script>
+</body>
+
+
+<!-- Mirrored from demo.innoshop.cn/en/register by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 03 Mar 2025 13:30:53 GMT -->
+</html>
