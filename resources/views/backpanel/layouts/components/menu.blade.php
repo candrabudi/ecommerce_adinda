@@ -1,5 +1,4 @@
 <ul class="menu-inner py-1 ps ps--active-y">
-    <!-- Dashboard -->
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link">
             <i class="menu-icon icon-base ti tabler-smart-home"></i>
@@ -7,7 +6,6 @@
         </a>
     </li>
 
-    <!-- Produk -->
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon icon-base ti tabler-shopping-cart"></i>
@@ -32,7 +30,6 @@
         </ul>
     </li>
 
-    <!-- Order -->
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link">
             <i class="menu-icon icon-base ti tabler-box"></i>
@@ -40,7 +37,6 @@
         </a>
     </li>
 
-    <!-- Customer -->
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link">
             <i class="menu-icon icon-base ti tabler-users"></i>
@@ -48,23 +44,6 @@
         </a>
     </li>
 
-    <!-- Cupon -->
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link">
-            <i class="menu-icon icon-base ti tabler-ticket"></i>
-            <div data-i18n="Cupon">Kupon</div>
-        </a>
-    </li>
-
-    <!-- Discount -->
-    <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link">
-            <i class="menu-icon icon-base ti tabler-percentage"></i>
-            <div data-i18n="Discount">Diskon</div>
-        </a>
-    </li>
-
-    <!-- Banner -->
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link">
             <i class="menu-icon icon-base ti tabler-photo"></i>
@@ -72,7 +51,6 @@
         </a>
     </li>
 
-    <!-- Jasa Pengiriman -->
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link">
             <i class="menu-icon icon-base ti tabler-truck"></i>
@@ -80,7 +58,6 @@
         </a>
     </li>
 
-    <!-- Pembayaran -->
     <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
             <i class="menu-icon icon-base ti tabler-credit-card"></i>
@@ -98,6 +75,20 @@
                 </a>
             </li>
         </ul>
+    </li>
+
+    <li class="menu-item">
+        <a href="{{ route('backpanel.users.index') }}" class="menu-link">
+            <i class="menu-icon icon-base ti tabler-users"></i>
+            <div data-i18n="Users">Users</div>
+        </a>
+    </li>    
+
+    <li class="menu-item">
+        <a href="{{ route('backpanel.website.settings') }}" class="menu-link">
+            <i class="menu-icon icon-base ti tabler-settings"></i>
+            <div data-i18n="Setting">Setting</div>
+        </a>
     </li>
 
 

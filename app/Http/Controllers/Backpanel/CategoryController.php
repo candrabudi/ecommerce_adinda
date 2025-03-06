@@ -37,20 +37,19 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
+        
         $request->validate([
             'name' => 'required',
-            'slug' => 'required|unique:categories,slug,' . $id,
             'image' => 'nullable|image',
             'status' => 'required',
         ]);
 
         $category = Category::findOrFail($id);
         $category->name = $request->name;
-        $category->slug = $request->slug;
+        $category->slug = $request->slug ?? $category->slug;
         $category->status = $request->status;
         $category->description = $request->description;
 
-        // Update image jika ada
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('categories', 'public');
             $category->image = $imagePath;

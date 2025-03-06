@@ -13,4 +13,17 @@ class Category extends Model
     {
         return $this->belongsToMany(Product::class, 'category_products', 'category_id', 'product_id');
     }
+
+    public function children()
+    {
+        return $this->hasMany(Category::class, 'parent_id');
+    }
+
+    /**
+     * Relasi untuk mendapatkan kategori induk (parent).
+     */
+    public function parent()
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
 }

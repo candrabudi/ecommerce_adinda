@@ -39,19 +39,29 @@
                     <div class="card-body">
                         <h4 class="mb-1">Welcome to Adinda Shop! 👋</h4>
                         <p class="mb-6">Masuk untuk melakukan pengelolaan</p>
-                        <form id="formAuthentication" class="mb-4"
-                            action="https://demos.pixinvent.com/vuexy-html-admin-template/html/vertical-menu-template/index.html"
-                            method="GET">
+                        <form id="formAuthentication" class="mb-4" action="{{ route('login.process') }}" method="POST">
+                            @csrf
                             <div class="mb-6 form-control-validation">
-                                <label for="email" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="email" name="email-username"
+                                <label for="email-username" class="form-label">Username or Email</label>
+                                <input type="text" class="form-control" id="email-username" name="email-username"
                                     placeholder="Enter your email or username" autofocus />
+                                @error('email-username')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="mb-6 form-password-toggle form-control-validation">
                                 <label class="form-label" for="password">Password</label>
                                 <input type="password" id="password" class="form-control" name="password"
                                     placeholder="••••••••••••" aria-describedby="password" />
+                                @error('password')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
+                            @if ($errors->has('loginError'))
+                                <div class="text-danger mb-4">
+                                    {{ $errors->first('loginError') }}
+                                </div>
+                            @endif
                             <button type="submit" class="btn btn-primary d-grid w-100">Masuk</button>
                         </form>
                     </div>

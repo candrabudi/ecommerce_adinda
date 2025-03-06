@@ -89,7 +89,6 @@
                 </div>
             </div>
 
-            <!-- Multiple Image Input -->
             <div class="row mb-3">
                 <div class="col">
                     <label for="images" class="form-label">Product Images</label>

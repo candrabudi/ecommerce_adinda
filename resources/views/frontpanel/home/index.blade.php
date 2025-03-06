@@ -72,7 +72,7 @@
                                     <div class="product-grid-item">
                                         <div class="image"
                                             style="background-image: url('{{ $product->singleImage ? asset('storage/' . $product->singleImage->image_path) : asset('storage/default-image.jpg') }}');">
-                                            <a href=""></a>
+                                            <a href="{{ route('frontpanel.products.detail', $product->id) }}"></a>
                                             <div class="wishlist-container add-wishlist"
                                                 data-in-wishlist="{{ $product->in_wishlist }}" data-id="{{ $product->id }}"
                                                 data-price="{{ $product->price }}">
@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="product-item-info">
                                             <div class="product-name">
-                                                <a href="" data-toggle="tooltip" title="{{ $product->name }}"
+                                                <a href="{{ route('frontpanel.products.detail', $product->id) }}" data-toggle="tooltip" title="{{ $product->name }}"
                                                     data-placement="top">
                                                     {{ $product->name }}
                                                 </a>

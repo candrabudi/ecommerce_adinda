@@ -1,44 +1,41 @@
+@php
+    use App\Helpers\CategoryHelper;
+    $categories = CategoryHelper::getCategories();
+@endphp
 <div class="header-desktop">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="left">
             <h1 class="logo">
                 <a href="en.html">
-                    <img src="images/logo.png" class="img-fluid">
+                    <img src="{{ asset('/storage/'.$web_logo) }}" class="img-fluid">
                 </a>
             </h1>
             <div class="menu">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="en.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="{{ url('/') }}">Home</a>
                         </li>
+                        @foreach ($categories as $category)
+                            @if ($category->children->count() > 0)
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="{{ url('category/'.$category->slug) }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ $category->name }}
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        @foreach ($category->children as $child)
+                                            <li><a class="dropdown-item" href="{{ url('category/'.$child->slug) }}">{{ $child->name }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url('category/'.$category->slug) }}">{{ $category->name }}</a>
+                                </li>
+                            @endif
+                        @endforeach
                         <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link" href="en/category-hijab-collections.html">Hijab Collections</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="en/category-casual-hijab.html">Casual Hijab</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="en/category-formal-hijab.html">Formal Hijab</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="en/category-sport-hijab.html">Sport Hijab</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="en/category-modest-wear.html">Modest Wear</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                <a class="nav-link" href="en/category-hijab-accessories.html">Hijab Accessories</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="en/category-pins.html">Hijab Pins</a></li>
-                                    <li><a class="dropdown-item" href="en/category-scarves.html">Scarves</a></li>
-                                    <li><a class="dropdown-item" href="en/category-inner-caps.html">Inner Caps</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="en/about.html">About</a>
+                            <a class="nav-link" href="{{ url('about') }}">About</a>
                         </li>
                     </ul>
                 </nav>
@@ -53,7 +50,7 @@
                 <div class="item">
                     <div class="dropdown account-icon">
                         <a class="btn dropdown-toggle px-0" href="en/login.html">
-                            <img src="icon/account.svg" class="img-fluid">
+                            <img src="{{ asset('frontpanel/icon/account.svg') }}" class="img-fluid">
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
                             <a href="en/login.html" class="dropdown-item">Login</a>
@@ -63,13 +60,13 @@
                 </div>
                 <div class="item">
                     <a href="javascript:void(0);" onclick="wishlistComingSoon()">
-                        <img src="icon/love.svg" class="img-fluid">
+                        <img src="{{ asset('frontpanel/icon/love.svg') }}" class="img-fluid">
                         <span class="icon-quantity">0</span>
                     </a>
                 </div>
                 <div class="item">
                     <a href="javascript:void(0);" onclick="addToCart()">
-                        <img src="icon/cart.svg" class="img-fluid">
+                        <img src="{{asset('frontpanel/icon/cart.svg') }}" class="img-fluid">
                         <span class="icon-quantity">0</span>
                     </a>
                 </div>
