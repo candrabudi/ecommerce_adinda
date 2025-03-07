@@ -13,17 +13,45 @@ use App\Http\Controllers\Backpanel\PaymentAccountController;
 use App\Http\Controllers\Backpanel\WebsiteSettingController;
 use App\Http\Controllers\Backpanel\UserController;
 use App\Http\Controllers\Frontpanel\UserCartController;
+use App\Http\Controllers\Frontpanel\UserAuthController;
+use App\Http\Controllers\Frontpanel\UserAccountController;
+use App\Http\Controllers\Frontpanel\UserAddressController;
 
+
+// USER / CUSTOMER
+Route::get('/register', [UserAuthController::class, 'registerView'])->name('frontpanel.user.register');
+Route::post('/register', [UserAuthController::class, 'register'])->name('frontpanel.user.register.process');
+Route::get('/login', [UserAuthController::class, 'loginView'])->name('frontpanel.user.login');
+Route::post('/login', [UserAuthController::class, 'login'])->name('frontpanel.user.login.process');
 Route::get('/', [HomeController::class, 'index'])->name('frontpanel.home');
 Route::get('/products/{a}', [HomeController::class, 'showDetailProduct'])->name('frontpanel.products.detail');
 
 Route::post('/cart/add', [UserCartController::class, 'addToCart'])->name('cart.add');
 Route::post('/cart/buy-now', [UserCartController::class, 'buyNow'])->name('cart.buyNow');
+Route::middleware('auth')->group(function () {
+    Route::get('/account', [UserAccountController::class, 'account'])->name('frontpanel.account');
+    Route::get('/account/orders', [UserAccountController::class, 'orders'])->name('frontpanel.account.orders');
+    Route::get('/account/favorites', [UserAccountController::class, 'favorites'])->name('frontpanel.account.favorites');
+    Route::get('/account/addresses', [UserAccountController::class, 'addresses'])->name('frontpanel.account.addresses');
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
+    // DEMOGRAPHIC
+    Route::post('/account/addresses/store', [UserAddressController::class, 'store'])->name('frontpanel.account.addresses.store');
+    Route::get('/get-regencies/{province_id}', [UserAddressController::class, 'getRegencies']);
+    Route::get('/get-districts/{regency_id}', [UserAddressController::class, 'getDistricts']);
+    Route::get('/get-villages/{district_id}', [UserAddressController::class, 'getVillages']);
+    Route::put('/account/addresses/update/{id}', [UserAddressController::class, 'update'])->name('frontpanel.account.addresses.update');
+    Route::delete('/account/addresses/destroy/{id}', [UserAddressController::class, 'destroy'])->name('frontpanel.account.addresses.destroy');
 
-Route::post('/login', [AuthController::class, 'loginProcess'])->name('login.process');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+});
+
+
+// SUPERADMIN / ADMIN
+
+Route::get('/backpanel/login', [AuthController::class, 'login'])->name('login');
+
+Route::post('/backpanel/login', [AuthController::class, 'loginProcess'])->name('login.process');
+Route::post('/backpanel/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::prefix('backpanel')->middleware('auth')->group(function () {
 

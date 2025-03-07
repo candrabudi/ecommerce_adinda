@@ -57,11 +57,8 @@
         <div class="module-product-tab">
             <div class="container">
                 <div class="module-title-wrap">
-                    <div class="module-title">Feature Product</div>
-                    <div class="module-sub-title">Embrace your style with this chic garment, blending comfort
-                        and elegance. A must-have for any occasion, it&#039;s the perfect addition to your
-                        wardrobe.</div>
-
+                    <div class="module-title">Produk Unggulan</div>
+                    <div class="module-sub-title">Tunjukkan keanggunan Anda dengan hijab yang memadukan kenyamanan dan gaya. Hijab ini wajib dimiliki untuk segala kesempatan, menjadi pelengkap sempurna bagi koleksi busana Anda.</div>
                 </div>
 
                 <div class="tab-content">
